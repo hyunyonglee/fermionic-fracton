@@ -32,8 +32,8 @@ class FERMIONIC_FRACTON(CouplingModel,MPOModel):
         CouplingModel.__init__(self, lat)
         
         # 4-site hopping
-        self.add_multi_coupling( U, [('Cd', [1,1], 0), ('Cd', [0,0], 0), ('C', [1,0], 0), ('C', [0,1], 0)])
-        self.add_multi_coupling( U, [('Cd', [0,1], 0), ('Cd', [1,0], 0), ('C', [0,0], 0) ,('C', [1,1], 0)])
+        self.add_multi_coupling( -U, [('Cd', [1,1], 0), ('Cd', [0,0], 0), ('C', [1,0], 0), ('C', [0,1], 0)])
+        self.add_multi_coupling( -U, [('Cd', [0,1], 0), ('Cd', [1,0], 0), ('C', [0,0], 0) ,('C', [1,1], 0)])
         
         # chemical potential
         self.add_onsite( -mu, 0, 'N')
