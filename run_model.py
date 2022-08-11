@@ -72,8 +72,6 @@ L = Lx * Ly
 # initial state
 if IS == 'checkerboard':
     product_state = ( ['empty', 'full'] * int(Ly/2) + ['full', 'empty'] * int(Ly/2) ) * int(Lx/2)
-    print(product_state)
-
 else:
     product_state = [IS] * M.lat.N_sites
     
